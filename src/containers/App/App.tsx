@@ -17,9 +17,10 @@ const createItems = () => {
 const App = () => {
   const [items, setItems] = useState(createItems());
   const [attempts, setAttempts] = useState(0);
+  const [gameOver, setGameOver] = useState(false);
 
   const handleCellClick = (index: number) => {
-    if (items[index].clicked) return; // Убрал проверку gameOver
+    if (gameOver || items[index].clicked) return;
 
     setItems((prevItems) => {
       const newItems = [...prevItems];
@@ -30,14 +31,15 @@ const App = () => {
     setAttempts((prevAttempts) => prevAttempts + 1);
 
     if (items[index].hasItem) {
-      alert("Item found!"); // Сообщение об отыскании кольца, игра продолжается
+      setGameOver(true);
+      alert("Item found!");
     }
   };
 
-  // Сброс игры
   const handleReset = () => {
     setItems(createItems());
     setAttempts(0);
+    setGameOver(false);
   };
 
   return (
