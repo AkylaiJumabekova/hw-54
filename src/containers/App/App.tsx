@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import GameBoard from "../../components/GameBoard/GameBoard";
 import AttemptsCounter from "../../components/AttemptsCounter/AttemptsCounter";
 import ResetButton from "../../components/ResetButton/ResetButton";
