@@ -45,8 +45,10 @@ const App = () => {
   return (
     <div className="App">
       <GameBoard cells={items} onCellClick={handleCellClick} />
-      <AttemptsCounter count={attempts} />
-      <ResetButton onReset={handleReset} />
+      <div className="controls">
+        <AttemptsCounter count={attempts} />
+        <ResetButton onReset={handleReset} />
+      </div>
     </div>
   );
 };

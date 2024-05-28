@@ -16,9 +16,32 @@
 }
 
 .cell.item {
-  background-color: gold; 
+  background-color: green; 
 }
 
 .cell.empty {
   background-color: #f0f0f0;
+}
+
+.button {
+  background-color: green; 
+  color: white ;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-top: 20px; 
+}
+
+.button:hover {
+  background-color: #fff ;
+  color: green;
+  border: 2px solid green;
+}
+.controls {
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+  flex-direction: column;
+  margin-top: 20px;
 }
